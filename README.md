@@ -40,12 +40,12 @@ builds an information map (GP variance or Cohn's ALC), passes it to the planner'
 |---|---|---|
 | `myopic` | adaptive | —  |
 | `constrained` | adaptive | `budget_a`, `budget_b` |
-| `mcts` | adaptive | `simulations`, `horizon`, `gamma`, `c_param`, `k_a`, `alpha_a`, `budget_a`, `budget_b |
-| `rig` | adaptive | `horizon`, `samples`, `gamma`, `budget_a`, `budget_b |
-| `iig` | adaptive | `horizon`, `ric_threshold`, `gamma`, `budget_a`, `budget_b |
-| `ktbo` | adaptive | `simulations`, `ls_y`, `n_samples`, `num_anchors`, `horizon_scale`, `gamma`, `budget_a`, `budget_b |
+| `mcts` | adaptive | `simulations`, `horizon`, `gamma`, `c_param`, `k_a`, `alpha_a`, `budget_a`, `budget_b` |
+| `rig` | adaptive | `horizon`, `samples`, `gamma`, `budget_a`, `budget_b` |
+| `iig` | adaptive | `horizon`, `ric_threshold`, `gamma`, `budget_a`, `budget_b` |
+| `ktbo` | adaptive | `simulations`, `ls_y`, `n_samples`, `num_anchors`, `horizon_scale`, `gamma`, `budget_a`, `budget_b` |
 | `ipp_mpe` | adaptive | `samples` |
-| `ergodic` | adaptive | `cost-weight`, `number of frequencies`, `traejctory steps`, `iterations`, `budget_a`, `budget_b |
+| `ergodic` | adaptive | `cost-weight`, `number of frequencies`, `traejctory steps`, `iterations`, `budget_a`, `budget_b` |
 | `snake` | geometric | — |
 | `spiral` | geometric | — |
 | `sobol` | geometric | — |
