@@ -1,7 +1,7 @@
 # cost_aware_path_planning
 
-Active learning framework for cost-aware spatial exploration. A Gaussian Process is
-iteratively refined by querying the environment at locations chosen by a planner; the
+Iterative path planning framework for cost-aware spatial exploration. A Gaussian Process is
+iteratively refined by querying the environment at locations chosen by a planner. The
 loop stops when validation NRMSE drops below 0.03.
 
 ## Directory layout
@@ -36,16 +36,16 @@ builds an information map (GP variance or Cohn's ALC), passes it to the planner'
 
 ## Planners
 
-| Name | Type | Key hyperparameters |
+| Name | Type | Hyperparameters |
 |---|---|---|
-| `myopic` | adaptive | `budget_a`, `budget_b` |
+| `myopic` | adaptive | —  |
 | `constrained` | adaptive | `budget_a`, `budget_b` |
-| `mcts` | adaptive | `simulations`, `horizon`, `gamma`, `c_param`, `k_a`, `alpha_a` |
-| `rig` | adaptive | `horizon`, `samples`, `gamma` |
-| `iig` | adaptive | `horizon`, `ric_threshold` |
-| `ktbo` | adaptive | `simulations`, `ls_y`, `n_samples`, `num_anchors`, `horizon_scale`, `gamma` |
-| `ipp_mpe` | adaptive | — |
-| `ergodic` | adaptive | — |
+| `mcts` | adaptive | `simulations`, `horizon`, `gamma`, `c_param`, `k_a`, `alpha_a`, `budget_a`, `budget_b |
+| `rig` | adaptive | `horizon`, `samples`, `gamma`, `budget_a`, `budget_b |
+| `iig` | adaptive | `horizon`, `ric_threshold`, `gamma`, `budget_a`, `budget_b |
+| `ktbo` | adaptive | `simulations`, `ls_y`, `n_samples`, `num_anchors`, `horizon_scale`, `gamma`, `budget_a`, `budget_b |
+| `ipp_mpe` | adaptive | `samples` |
+| `ergodic` | adaptive | `cost-weight`, `number of frequencies`, `traejctory steps`, `iterations`, `budget_a`, `budget_b |
 | `snake` | geometric | — |
 | `spiral` | geometric | — |
 | `sobol` | geometric | — |
