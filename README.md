@@ -8,11 +8,11 @@ loop stops when validation NRMSE drops below 0.03.
 
 ```
 environments/
-  small/          # 20×20 grids
+  small/          # 25×25 grids
     exploration/  # env_expl_NN.csv  — full ground-truth field used during sampling
     test/         # env_test_NN.csv  — held-out set for test NRMSE
     validation/   # env_val_NN.csv   — held-out set for early-stopping criterion
-  large/          # 40×40 grids (same structure)
+  large/          # 50×50 grids (same structure)
 planners/         # planner implementations (see below)
 init.py           # one-time setup script
 step.py           # single active-learning step script
