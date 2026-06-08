@@ -70,12 +70,12 @@ bash active_learning.sh <env_id> <planner> <size> <seed> <normalize_reward> <inf
 
 ```bash
 bash active_learning.sh 3 mcts small 42 true variance \
-  --simulations 800 --horizon 5 --gamma 0.85 --c_param 1.0
+  --simulations 1500 --horizon 5 --gamma 0.9 --c_param 2.6 --k_a 0.59 --alpha_a 0.5 --budget_a 0.12 --budget_b 0.18
 ```
 
 This runs environment 03, small grid, seed 42, with reward normalization and GP-variance
-as the information criterion. MCTS will use 800 simulations, a planning horizon of 5
-steps, discount factor 0.85, and UCB exploration constant 1.0.
+as the information criterion. MCTS will use 1500 simulations, a planning horizon of 5
+steps, discount factor 0.9, UCB exploration constant 2.6, k_a of 0.59, alpha_a of 0.5 and budget coefficients of 0.12 and 0.18.
 
 Output is written to:
 ```
